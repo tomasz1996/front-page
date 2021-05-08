@@ -1,0 +1,15 @@
+Prosimy o przygotowanie fragmentu strony na podstawie projektu. Nie musi byæ wdro¿one pixel perfect (szczególnie, ¿e to tylko p³aski obrazek projektu), ale 
+chcemy aby efekt koñcowy by³ w pe³ni responsywny. 
+
+
+Szczegó³y:
+- sekcja o1. jako slideshow - 2 slajdy, animacje wedle uznania, klikalne kontrolki oraz strza³eczki do prze³¹czania (teksty niech siê te¿ zmieniaj¹ na slidach),
+- przy ka¿dej zmianie slide'a niech siê równie¿ zmienia kolor ca³ego contentu na nim (logo, menu, tekst na zdjêciu, strza³ki, kontrolki itp.) z czarnego na bia³y i vice versa, 
+np. na slide1-big.jpg niech wszystkie teksty/logo/ikony bêd¹ czarne, a na slide2-big.jpg - bia³e,
+- sekcja o2. - prosta siatka zdjêciami / zajawkami, mile widziany jakiœ hover effect przy kafelkach,
+- co do u¿ytego fonta w projekcie - nie ma on wiêkszego znaczenia przy tym zadaniu, wiêc je¿eli nie masz dostêpnego Futura PT, to u¿yj jakiegokolwiek, mo¿e byæ Roboto. Chodzi nam po prostu
+o zachowanie proporcji w rozmiarach fontów na stronie,
+- dropdown menu przy 'Produkty' - zrób tutaj po swojemu, mo¿e byæ nawet jednopoziomowe menu rozwijane z kilkoma pozycjami,
+- prosimy o wykonanie zadania za pomoc¹ frameworku React, jeœli chcesz mo¿esz dodatkowo u¿yæ dowolnej innej biblioteki. 
+
+Gotowy kod ze stron¹ podeœlij nam proszê linkiem do jakiegoœ repozytorium git.
