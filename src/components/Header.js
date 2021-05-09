@@ -5,7 +5,9 @@ import fb from '../images/fb.svg';
 import insta from '../images/insta.svg';
 import twitter from '../images/twitter.svg';
 import youtube from '../images/yt.svg';
-import { Link } from 'react-router-dom'
+import Sidebar from './Sidebar';
+
+// import { Link } from 'react-router-dom'
 
 
 const Header = (props) => {
@@ -27,12 +29,15 @@ const rotateUp = {
     transform: "rotate(-45deg)",
     top:"-10px"
 };
-const moveIn = { 
-    right:"0px"
-};
-const moveOut = { 
-    right:"-250px"
-};
+
+// const moveIn = { 
+//     right:"0px",
+//     // Ternary removed flashing backgrounds on menu items when oversizing
+//     background : isActiveHamburger? "white" : " none"
+// };
+// const moveOut = { 
+//     right:"-250px",
+// };
 
 
     return(
@@ -42,9 +47,9 @@ const moveOut = {
             </div>
 
             <div className="menuWrapper">
-                {/* <div className="items" style = { isActiveHamburger? {left: "0px"} : null}> */}
+
                 <div className="items" 
-                style = { isActiveHamburger? moveIn : moveOut} 
+                // style = { isActiveHamburger? moveIn : moveOut}
                 >
 
                     <div className="item nowosci">
@@ -101,16 +106,13 @@ const moveOut = {
                    
                 </div>
                 
-                {/* remove active class  */}
-                <div className={`hamburger ${isActiveHamburger? "active":""}`} onClick={hamburgerAction}>
+                <div className="hamburger" onClick={hamburgerAction}>
                     <span className="span1" style = { isActiveHamburger? rotateDown : null}></span>
                     <span className="span2" style = { isActiveHamburger? {opacity: "0"}: null}></span>
                     <span className="span3"style = { isActiveHamburger? rotateUp : null}></span>
                 </div>
-                
-                {/* <div className="sidebar">
 
-                </div> */}
+                <Sidebar isActiveHamburger= {isActiveHamburger}/>
             </div>
         </div>
     )

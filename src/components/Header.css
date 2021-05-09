@@ -1,8 +1,14 @@
 .container {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  height: 100%;
   width: 100vw;
+}
+
+.kenueLogoWrapper {
+  height: 120px;
 }
 
 .kenueLogoImg {
@@ -22,17 +28,19 @@
 .items {
   display: flex;
   flex-direction: row;
+  background: none;
   transition: all 0.3s ease-in;
 }
 .item {
   position: relative;
   margin: 0px 40px;
+  /* overflow: hidden; */
 }
 
 .item p {
   font-size: 1.3em;
   white-space: nowrap;
-  transition: all 0.2s;
+  /* transition: all 0.2s; */
 }
 .item p:hover {
   cursor: pointer;
@@ -45,7 +53,6 @@
 
 .produkty {
   position: relative;
-  /* overflow: visible; */
 }
 
 .productArrow {
@@ -145,12 +152,11 @@
     font-size: 1.18em;
   }
   .kenueLogoImg {
-    height: 70px;
-    margin: 0 30px;
+    height: 72px;
   }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1300px) {
   .item {
     margin: 0px 25px;
   }
@@ -158,13 +164,9 @@
   .item p {
     font-size: 1.1em;
   }
-  .kenueLogoImg {
-    height: 60px;
-    margin: 0 28px;
-  }
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1200px) {
   .item {
     margin: 0px 20px;
   }
@@ -182,13 +184,16 @@
   .hamburger {
     display: flex;
   }
+
   .items {
-    position: absolute;
+    /* position: absolute;
     top: 120px;
     right: -250px;
     flex-direction: column;
-    width: 250px;
+    width: 250px; */
+    display: none;
   }
+  /* 
   .item {
     margin: 0px;
     text-align: start;
@@ -198,12 +203,15 @@
     border-left: 1px solid;
     border-right: 1px solid;
   }
+
   .item:last-child {
     border-bottom: 1px solid;
   }
+
   .produkty {
     display: flex;
   }
+
   .productDropdown {
     position: relative;
     top: 30px;
@@ -222,12 +230,18 @@
   .dropdownItem:hover {
     transform: scale(1);
     background: rgb(197, 197, 197);
-  }
+  }*/
 }
 
 @media (max-width: 768px) {
   .menuWrapper {
     height: 80px;
+  }
+  .kenueLogoWrapper {
+    height: 80px;
+  }
+  .item {
+    cursor: pointer;
   }
   .items {
     top: 80px;
