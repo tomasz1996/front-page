@@ -30,10 +30,13 @@ const rotateUp = {
     top:"-10px"
 };
 
-// const moveIn = { 
-//     right:"0px",
-//     // Ternary removed flashing backgrounds on menu items when oversizing
-//     background : isActiveHamburger? "white" : " none"
+const moveDown = { 
+    top:"60px",
+    opacity: "1",
+};
+// const moveUp = { 
+//     top:"-350px",
+//     opacity: "0",
 // };
 // const moveOut = { 
 //     right:"-250px",
@@ -48,9 +51,7 @@ const rotateUp = {
 
             <div className="menuWrapper">
 
-                <div className="items" 
-                // style = { isActiveHamburger? moveIn : moveOut}
-                >
+                <div className="items">
 
                     <div className="item nowosci">
                         <p>Nowosci</p>
@@ -61,7 +62,7 @@ const rotateUp = {
                         <span className="material-icons-outlined productArrow" onClick = {showDropdown}>expand_more</span>
 
                         <div className="productDropdown" 
-                        style = {{display: `${dropdown? "block": 'none'}`}}
+                        style = {dropdown? moveDown : null}
                         >
                             <div className="dropdownItem">Produkt 1</div>
                             <div className="dropdownItem">Produkt 2</div>

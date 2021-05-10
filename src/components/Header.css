@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  z-index: 20;
 }
 
 .kenueLogoWrapper {
@@ -20,10 +21,12 @@
 }
 
 .menuWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   height: 120px;
   user-select: none;
+  /* right: 30px; */
 }
 .items {
   display: flex;
@@ -64,9 +67,13 @@
 
 .productDropdown {
   position: absolute;
-  top: 50px;
+  top: -250px;
   left: -30px;
   width: 150px;
+  opacity: 0;
+  z-index: 18;
+  /* display: none; */
+  transition: all 0.2s ease-out;
 }
 
 .dropdownItem {
@@ -129,8 +136,9 @@
   flex-direction: column;
   cursor: pointer;
   align-self: center;
-  padding: 10px;
+  /* padding: 10px; */
   display: none;
+  margin: 0 20px;
 }
 
 .hamburger span {
@@ -153,6 +161,9 @@
   }
   .kenueLogoImg {
     height: 72px;
+  }
+  .productDropdown {
+    left: -40px;
   }
 }
 
@@ -186,51 +197,12 @@
   }
 
   .items {
-    /* position: absolute;
-    top: 120px;
-    right: -250px;
-    flex-direction: column;
-    width: 250px; */
     display: none;
   }
-  /* 
-  .item {
-    margin: 0px;
-    text-align: start;
-    padding: 20px 0 20px 40px;
-    font-size: 1.05rem;
-    border-top: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-  }
 
-  .item:last-child {
-    border-bottom: 1px solid;
+  .socials {
+    margin-right: 10px;
   }
-
-  .produkty {
-    display: flex;
-  }
-
-  .productDropdown {
-    position: relative;
-    top: 30px;
-    left: -106px;
-    width: 250px;
-    margin-bottom: 10px;
-  }
-
-  .dropdownItem {
-    background: white;
-    text-align: center;
-    color: black;
-    width: 248px;
-    transition: 0.5s;
-  }
-  .dropdownItem:hover {
-    transform: scale(1);
-    background: rgb(197, 197, 197);
-  }*/
 }
 
 @media (max-width: 768px) {

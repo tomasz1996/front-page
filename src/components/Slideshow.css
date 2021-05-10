@@ -4,21 +4,198 @@
   box-sizing: border-box;
 }
 
-.slideshowContainer {
-  /* width: 100px;
-  height: 100px; */
-
-  /* background: yellow; */
-  /* background-image: url("../images/slide1-big.jpg"); */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* background: no-repeat center center fixed; */
+.sliderWrapper {
+  height: 100vh;
+  width: 100vw;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  /* z-index: 1; */
 }
 
-.slideshowItem {
+.sliderImg {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  /* z-index: 1; */
+}
+
+.info {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  user-select: none;
+}
+
+.info .section {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+}
+.info .section .sectionCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid black;
+}
+
+.info .section .one {
+  font-size: 8rem;
+  /* USe line hight to position verticaly text */
+  line-height: 1.5rem;
+}
+.info .section .crossLine {
+  position: absolute;
+  left: -40px;
+  top: 20px;
+  width: 210px;
+  transform: rotate(-45deg);
+  border-bottom: 1px solid black;
+}
+
+.info .description {
+  position: relative;
+}
+
+.info .description p {
+  font-size: 4rem;
+}
+
+.info .company p {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.info .company span {
+  font-weight: 800;
+}
+.underlineWrapper {
+  position: relative;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+}
+.underline {
+  width: 200px;
+  border-bottom: 2px solid black;
+}
+.circleArrowDiv {
+  position: relative;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.outerCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.outerCircle span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  align-items: center;
+  top: 80%;
+  /* z-index: 2; */
+}
+.navigation .arrows {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.navigation .buttons {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  /* z-index: 2; */
+}
+.navigation .buttons .button {
   /* position: relative; */
-  /* width: 100%;
-  height: 100%; */
-  /* overflow: hidden; */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 10px 40px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1500px), (max-height: 800px) {
+  .info {
+    left: 6%;
+  }
+  .info .description p {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .underlineWrapper {
+    margin-top: 60px;
+  }
+
+  .info .section .sectionCircle {
+    width: 50px;
+    height: 50px;
+    border: 6px solid black;
+  }
+
+  .info .section .one {
+    font-size: 6rem;
+    line-height: 2rem;
+  }
+  .info .section .crossLine {
+    left: -30px;
+    top: 20px;
+    width: 160px;
+  }
+}
+@media (max-width: 600px), (max-height: 800px) {
+  .underlineWrapper {
+    margin-top: 30px;
+  }
+
+  .info {
+    top: 25%;
+  }
+  .info .description p {
+    font-size: 2.5rem;
+  }
+  .info .company p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    top: 20%;
+  }
+  .info .description p {
+    font-size: 2rem;
+  }
+  .info .company p {
+    font-size: 1.2rem;
+  }
+
+  .underline {
+    width: 120px;
+  }
+  .circleArrowDiv {
+    margin-left: 40px;
+  }
+  .outerCircle {
+    width: 60px;
+    height: 60px;
+  }
 }

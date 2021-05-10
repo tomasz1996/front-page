@@ -15,7 +15,7 @@ const Sidebar = (props) => {
     return ( 
             <div className="sidebar" 
             style = {{display: `${isActiveHamburger? "flex": 'none'}`}}
-            style = { isActiveHamburger? moveIn : null}
+            style = {isActiveHamburger? moveIn : null}
                 >
 
                     <div className="sidebarItem nowosci">

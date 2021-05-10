@@ -5,8 +5,8 @@ import Slideshow from './components/Slideshow';
 function App() {
   return (
     <div>
-      <Slideshow />
       <Header />
+      <Slideshow />
     </div>
   );
 }
