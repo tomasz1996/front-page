@@ -19,7 +19,7 @@
   .sidebarItem {
     margin: 0px;
     text-align: start;
-    padding: 20px 0 20px 40px;
+    padding: 20px 0 20px 30px;
     font-size: 1.05rem;
     border-top: 1px solid;
     border-left: 1px solid;
@@ -41,7 +41,7 @@
   .productItems {
     position: relative;
     top: 40px;
-    left: -50%;
+    left: -54%;
     width: 250px;
     margin-bottom: 20px;
     display: none;
