@@ -1,19 +1,9 @@
-import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';
 import  './Gallery.css';
 import care from "../images/01_care.jpg"
 
 const Gallery = () => {
-    // const layout = [
-    //   {i: 'a', x: 0, y: 0, w: 1, h: 2, static: true},
-    //   {i: 'b', x: 1, y: 0, w: 3, h: 2, static: true},
-    //   {i: 'c', x: 4, y: 2, w: 1, h: 2, static: true},
-    //   {i: 'd', x: 4, y: 0, w: 1, h: 2, static: true},
-    //   {i: 'e', x: 4, y: 0, w: 1, h: 2, static: true},
-    //   {i: 'f', x: 4, y: 0, w: 1, h: 20, static: true}
-    // ];
     
     return ( 
-
       <div className="galleryWrapper">
 
         <div className="empty">
@@ -107,6 +97,7 @@ const Gallery = () => {
 
 
       </div>
+      
      );
 }
  

@@ -6,7 +6,7 @@ import Slideshow from './components/Slideshow';
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Slideshow />
       <Gallery />
     </div>

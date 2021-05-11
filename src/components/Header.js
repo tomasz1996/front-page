@@ -4,13 +4,20 @@ import logo from '../images/logo_KEUNE.svg';
 import fb from '../images/fb.svg';
 import insta from '../images/insta.svg';
 import twitter from '../images/twitter.svg';
-import youtube from '../images/yt.svg';
+import yt from '../images/yt.svg';
+import logo_WHITE from '../images/logo_KEUNE_WHITE.svg';
+import fb_WHITE from '../images/fb_WHITE.svg';
+import insta_WHITE from '../images/insta_WHITE.svg';
+import twitter_WHITE from '../images/twitter_WHITE.svg';
+import yt_WHITE from '../images/yt_WHITE.svg';
 import Sidebar from './Sidebar';
 
 // import { Link } from 'react-router-dom'
 
 
 const Header = (props) => {
+
+const currentSlide = props.currentSlide
 
 const [dropdown, setDropdown] = useState(false)
 const [isActiveHamburger, setIsActiveHamburger] = useState(false)
@@ -30,36 +37,32 @@ const rotateUp = {
     top:"-10px"
 };
 
+//Products dropdown
 const moveDown = { 
     top:"60px",
     opacity: "1",
 };
-// const moveUp = { 
-//     top:"-350px",
-//     opacity: "0",
-// };
-// const moveOut = { 
-//     right:"-250px",
-// };
 
 
     return(
         <div className="container">
             <div className="kenueLogoWrapper">
-                <img className="kenueLogoImg" src={logo} alt="KENUE LOGO" />
+                <img className="kenueLogoImg" src={`${currentSlide === 0 ? logo_WHITE: logo}`} alt="KENUE LOGO" />
             </div>
 
             <div className="menuWrapper">
 
                 <div className="items">
 
-                    <div className="item nowosci">
+                    <div className={`item  ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>Nowosci</p>
                     </div>
                     
-                    <div className="item produkty" onClick = {showDropdown}>
+                    <div className={`item  produkty ${currentSlide === 0 ? "itemWhite": "itemBlack"}`} 
+                        onClick = {showDropdown}>
                         <p>Produkty</p>
-                        <span className="material-icons-outlined productArrow" onClick = {showDropdown}>expand_more</span>
+                        <span  className={`material-icons-outlined  ${currentSlide === 0 ? "productArrowWhite": "productArrowBlack"}`} 
+                        onClick = {showDropdown}>expand_more</span>
 
                         <div className="productDropdown" 
                         style = {dropdown? moveDown : null}
@@ -71,19 +74,19 @@ const moveDown = {
                             <div className="dropdownItem">Produkt 5</div>
                         </div>
                     </div>
-                    <div className="item trendy">
+                    <div className={`item  ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>Trendy</p>
                     </div>
-                    <div className="item oFirmie">
+                    <div className={`item  oFirmie ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>O firmie</p>
                     </div>
-                    <div className="item salony">
+                    <div className={`item  ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>Salony</p>
                     </div>
-                    <div className="item dystrybutorzy">
+                    <div className={`item  ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>Dystrybutorzy</p>
                     </div>
-                    <div className="item kontakt">
+                    <div className={`item  ${currentSlide === 0 ? "itemWhite": "itemBlack"}`}>
                         <p>Kontakt</p>
                     </div>
                 </div>
@@ -93,24 +96,32 @@ const moveDown = {
                         <use style={{color: "red"}} href="./src/images/fb.svg"></use>
                     </svg> */}
                     <a href="https://www.facebook.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
-                        <img className="social fb" src={fb} alt="facebook logo"/>
+                        <img className="social fb" src={`${currentSlide === 0 ? fb_WHITE : fb}`} alt="facebook logo"/>
                     </a>
                     <a href="https://www.twitter.com/KeuneUK/" target="_blank" rel="noreferrer">
-                        <img className="social twitter" src={twitter} alt="twitter logo"/>
+                        <img className="social twitter" src={`${currentSlide === 0 ? twitter_WHITE : twitter}`} alt="twitter logo"/>
                     </a>
                     <a href="https://www.youtube.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
-                        <img className="social youtube" src={youtube} alt="youtube logo"/>
+                        <img className="social youtube" src={`${currentSlide === 0 ? yt_WHITE : yt}`} alt="youtube logo"/>
                     </a>
                     <a href="https://www.instagram.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
-                        <img className="social insta" src={insta} alt="instagram logo"/>
+                        <img className="social insta" src={`${currentSlide === 0 ? insta_WHITE : insta}`} alt="instagram logo"/>
                     </a>
                    
                 </div>
                 
                 <div className="hamburger" onClick={hamburgerAction}>
-                    <span className="span1" style = { isActiveHamburger? rotateDown : null}></span>
-                    <span className="span2" style = { isActiveHamburger? {opacity: "0"}: null}></span>
-                    <span className="span3"style = { isActiveHamburger? rotateUp : null}></span>
+                    <span 
+                    className={` ${currentSlide === 0 ? "spanWhite": "spanBlack"}`} 
+                    style = { isActiveHamburger? rotateDown : null}></span>
+
+                    <span 
+                    className={` ${currentSlide === 0 ? "spanWhite": "spanBlack"}`} 
+                    style = { isActiveHamburger? {opacity: "0"}: null}></span>
+
+                    <span 
+                    className={` ${currentSlide === 0 ? "spanWhite": "spanBlack"}`} 
+                    style = { isActiveHamburger? rotateUp : null}></span>
                 </div>
 
                 <Sidebar isActiveHamburger= {isActiveHamburger}/>

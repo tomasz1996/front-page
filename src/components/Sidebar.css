@@ -24,6 +24,7 @@
     border-top: 1px solid;
     border-left: 1px solid;
     border-right: 1px solid;
+    white-space: nowrap;
   }
   .sidebarItem:last-child {
     border-bottom: 1px solid;

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --white: white;
 }
 
 .sliderWrapper {
@@ -23,7 +24,6 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  /* z-index: 1; */
 }
 
 .info {
@@ -38,7 +38,13 @@
   display: flex;
   margin-bottom: 50px;
 }
-.info .section .sectionCircle {
+.info .section .sectionCircleWhite {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+}
+.info .section .sectionCircleBlack {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -47,16 +53,28 @@
 
 .info .section .one {
   font-size: 8rem;
-  /* USe line hight to position verticaly text */
+  /* Use line hight to position verticaly text */
   line-height: 1.5rem;
 }
+.info .section .oneWhite {
+  color: var(--white);
+}
+.info .section .oneBlack {
+  color: black;
+}
+
 .info .section .crossLine {
   position: absolute;
   left: -40px;
   top: 20px;
   width: 210px;
   transform: rotate(-45deg);
+}
+.info .section .crossLineBlack {
   border-bottom: 1px solid black;
+}
+.info .section .crossLineWhite {
+  border-bottom: 1px solid var(--white);
 }
 
 .info .description {
@@ -66,10 +84,22 @@
 .info .description p {
   font-size: 4rem;
 }
+.info .descriptionWhite p {
+  color: var(--white);
+}
+.info .descriptionBlack p {
+  color: black;
+}
 
 .info .company p {
   font-size: 2rem;
   font-weight: 100;
+}
+.info .companyWhite p {
+  color: var(--white);
+}
+.info .companyBlack p {
+  color: black;
 }
 .info .company span {
   font-weight: 800;
@@ -82,8 +112,15 @@
 }
 .underline {
   width: 200px;
+  /* border-bottom: 2px solid black; */
+}
+.underlineBlack {
   border-bottom: 2px solid black;
 }
+.underlineWhite {
+  border-bottom: 2px solid var(--white);
+}
+
 .circleArrowDiv {
   position: relative;
   margin-left: 50px;
@@ -93,7 +130,13 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+}
+
+.outerCircleBlack {
   border: 2px solid black;
+}
+.outerCircleWhite {
+  border: 2px solid var(--white);
 }
 .outerCircle span {
   position: relative;
@@ -101,7 +144,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.arrowWhite {
+  color: var(--white);
+}
 .navigation {
   position: relative;
   display: flex;
@@ -119,30 +164,60 @@
   margin-bottom: 40px;
   user-select: none;
 }
+/* ////////////////////NAVIGATION////////////////////// */
+.navigation .znakKeuneWhite {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  bottom: 7px;
+  right: 2px;
+  cursor: pointer;
+}
+.navigation .znakKeune {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  bottom: 7px;
+  right: 8px;
+  cursor: pointer;
+}
 
-.navigation .buttons {
+.navigation .buttonsBlack {
   position: relative;
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  /* transition: all 0.2s ease-in; */
 }
-.navigation .buttons .button {
-  /* position: relative; */
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 10px 50px;
-  cursor: pointer;
-  border: 2px solid rgba(0, 0, 0, 0.8);
-}
-.button-active {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 10px 50px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
+.navigation .buttonsWhite {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--white);
 }
 
+.navigation .buttonBlack {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px 50px;
+  cursor: pointer;
+  border: 1.5px solid rgba(0, 0, 0);
+}
+.navigation .buttonWhite {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px 50px;
+  cursor: pointer;
+  border: 1.5px solid var(--white);
+}
+.navigation .buttonBlank {
+  width: 10px;
+  height: 10px;
+  margin: 10px 50px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+/* ///////////////////MEDIA QUERIES///////////////////////// */
 @media (max-width: 1500px), (max-height: 800px) {
   .info {
     left: 6%;
@@ -159,7 +234,7 @@
   .info .section .sectionCircle {
     width: 50px;
     height: 50px;
-    border: 6px solid black;
+    border-width: 6px;
   }
 
   .info .section .one {
@@ -216,23 +291,28 @@
     margin: 0;
   }
 
-  .navigation .buttons .button {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    margin: 10px 30px;
-    cursor: pointer;
-    border: 2px solid rgba(0, 0, 0, 0.8);
-  }
-  .button-active {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    margin: 10px 30px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
   .arrows .arrow {
     font-size: 35px;
+  }
+
+  .navigation .buttonBlack {
+    width: 14px;
+    height: 14px;
+  }
+  .navigation .buttonWhite {
+    width: 14px;
+    height: 14px;
+  }
+
+  .navigation .znakKeuneWhite {
+    width: 24px;
+    height: 24px;
+    bottom: 10px;
+  }
+  .navigation .znakKeune {
+    width: 24px;
+    height: 24px;
+    bottom: 10px;
+    right: 10px;
   }
 }
