@@ -1,37 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Slideshow.css';
 import Slide1 from "../images/slide1-big.jpg"
 import Slide2 from "../images/slide2-big.jpg"
-// import { GiCircle } from 'react-icons/gi';
 import Header from './Header';
-// import Slide1 from "../images/01_care.jpg"
-// import Slide2 from "../images/02_design.jpg"
-// import Slider from "react-slick"
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 const Slideshow = () => {
     const slides = [Slide1, Slide2]
 
-    const [imageIndex, setImageIndex] = useState(0);
-    
-    // const divStyle = {
-    //     height: "100vh",
-    //     width: "100%",
-    //     background: `url(${slides[imageIndex]})`,
-    //     backgroundPosition: "center",
-    //     backgroundRepeat: "no-repeat",
-    //     backgroundSize: "cover",
-    // }
+    const [currentSlide, setCurrentSlide] = useState(0);
+   
+    // Start animation
+    useEffect(()=>{
+        const timeout = setTimeout(() => {
+            activate("right")
+            console.log("called");
+        }, 5000);
 
-      return (
-          <div className="sliderWrapper">
-            <div className="slide">
+        return ()=>{clearTimeout(timeout)}
+
+    },[currentSlide])
+
+    // Handling  buttons and arrows
+    const activate = (value) => {
+        if(value === "0") {
+            setCurrentSlide(0)
+         }
+         if(value === "1") {
+            setCurrentSlide(1)
+         }
+         if(value === "right") {
+            if(currentSlide === slides.length-1){
+                setCurrentSlide(0)
+            }
+            else {
+                setCurrentSlide(currentSlide +1)
+            }
+         }
+         if(value === "left") {
+            if(currentSlide === 0){
+                setCurrentSlide(slides.length-1)
+            }
+            else {
+                setCurrentSlide(currentSlide -1)
+            }
+         }
+    }
+
+    return (
+        <div className="sliderWrapper">
+            
+            <div className={`slide ${currentSlide === 0 ? "slide-active": null}`}>
                 <img className="sliderImg" src = {Slide2} alt="cos"/>
                 <div className="info">
                     <div className="section">
-                        <div className="sectionCircle"/>
-                            <span className="one">1.</span>
+                        <div className="sectionCircle"></div>
+                        <span className="one">1.</span>
                         <div className="crossLine"></div>
                     </div>
                     <div className="description">
@@ -51,8 +74,8 @@ const Slideshow = () => {
                 </div>
             </div>
 
-            <div className="slide">
-                <img className="sliderImg" src = {Slide1} alt="cos"/>
+            <div className = {`slide ${currentSlide === 1 ? "slide-active": null}`}>
+                <img  className="sliderImg" src = {Slide1} alt="cos"/>
 
                 <div className="info">
                     <div className="section">
@@ -80,25 +103,26 @@ const Slideshow = () => {
 
                 </div>
             </div>
+            
+            
             <div className="navigation">
                 <div className="arrows">
-                    <span id="right" className="material-icons-outlined arrow">navigate_next</span>
-                    <span id="left" className="material-icons-outlined arrow">navigate_before</span>
-                    
+                    <span id="right" className="material-icons-outlined arrow"
+                    onClick= {() => activate("right")}>navigate_next</span>
+                    <span id="left" className="material-icons-outlined arrow"
+                    onClick= {() => activate("left")}>navigate_before</span>
                 </div>
                 <div className="buttons">
-                    <div className="button active"></div>
-                    <div className="button"></div>
+                    <div className={`${currentSlide === 0 ? "button-active": "button"}`}
+                        onClick= {() => activate("0")}>
+                    </div>
+                    <div className={`${currentSlide === 1 ? "button-active": "button"}`}
+                        onClick= {() => activate("1")}>
+                    </div>
                 </div>
             </div>
 
-
-            {/* <div className="slide">
-                <img className="sliderImg" src = {slides[imageIndex+1]} alt="cos"/>
-                <p>Bez kompromisu.<br/>Takie jak lubisz</p>
-            </div> */}
-            {/* <Header /> */}
-          </div>
+        </div>
       );
 }
 export default Slideshow;

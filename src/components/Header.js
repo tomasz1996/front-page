@@ -92,16 +92,16 @@ const moveDown = {
                     {/* <svg className="facebook"> 
                         <use style={{color: "red"}} href="./src/images/fb.svg"></use>
                     </svg> */}
-                    <a href="https://www.facebook.com/KeuneHaircosmetics/" target="_blank">
+                    <a href="https://www.facebook.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
                         <img className="social fb" src={fb} alt="facebook logo"/>
                     </a>
-                    <a href="https://www.twitter.com/KeuneUK/" target="_blank">
+                    <a href="https://www.twitter.com/KeuneUK/" target="_blank" rel="noreferrer">
                         <img className="social twitter" src={twitter} alt="twitter logo"/>
                     </a>
-                    <a href="https://www.youtube.com/KeuneHaircosmetics/" target="_blank">
+                    <a href="https://www.youtube.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
                         <img className="social youtube" src={youtube} alt="youtube logo"/>
                     </a>
-                    <a href="https://www.instagram.com/KeuneHaircosmetics/" target="_blank">
+                    <a href="https://www.instagram.com/KeuneHaircosmetics/" target="_blank" rel="noreferrer">
                         <img className="social insta" src={insta} alt="instagram logo"/>
                     </a>
                    

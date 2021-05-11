@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.galleryWrapper {
+  position: absolute;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "empty care care"
+    "design blend blend"
+    "koloryzacja koloryzacja so_pure";
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+/* ////////////////////EMPTY SECTION////////////////////// */
+.empty {
+  position: relative;
+  background: whitesmoke;
+  grid-area: empty;
+  transition: all 0.35s ease-in;
+}
+
+.empty p {
+  position: absolute;
+  font-size: 3.5rem;
+  left: 40%;
+  top: 50%;
+}
+.sectionGallery {
+  position: absolute;
+  display: flex;
+  top: 30%;
+  left: 30%;
+}
+.sectionGallery .sectionCircleGallery {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid black;
+}
+
+.sectionGallery .oneGallery {
+  font-size: 8rem;
+  line-height: 1.5rem;
+}
+
+.sectionGallery .crossLineGallery {
+  position: absolute;
+  left: -40px;
+  top: 20px;
+  width: 210px;
+  transform: rotate(-45deg);
+  border-bottom: 1px solid black;
+}
+/* //////////////////// UNIVERSAL////////////////////// */
+.shortInfo {
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+  right: 0;
+  margin-right: 100px;
+}
+
+.shortInfo .line {
+  position: absolute;
+  top: 40%;
+  right: 170px;
+  width: 150px;
+  border-bottom: 1px solid white;
+}
+
+.shortInfo .odkryj_siebie {
+  color: white;
+  font-size: 0.8rem;
+  margin-right: 50px;
+}
+.shortInfo span {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 150px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ////////////////////SECTION 1////////////////////// */
+
+.content1 {
+  position: relative;
+  grid-area: care;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.35s ease-in;
+}
+
+.content1 img {
+  width: 100%;
+}
+
+.content1 .companyText p {
+  position: absolute;
+  font-size: 3.5rem;
+  color: white;
+  bottom: 0;
+  margin: 50px;
+  /* bottom: 0; */
+}
+
+/* ////////////////////  SECTION 2  ////////////////////// */
+.content2 {
+  position: relative;
+  background-image: url("../images/02_design.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: design;
+  transition: all 0.35s ease-in;
+}
+
+.content2 .wrapper2 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  margin: 0 0 50px 50px;
+  bottom: 0;
+  left: 0;
+}
+
+.content2 .wrapper2 .companyText {
+  position: absolute;
+  font-size: 3.5rem;
+  color: white;
+  bottom: 50px;
+}
+
+.content2 .wrapper2 .shortInfo {
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.content2 .wrapper2 .shortInfo .line {
+  width: 180px;
+  left: 0;
+  border-bottom: 1px solid white;
+}
+
+.content2 .shortInfo .odkryj_siebie {
+  position: relative;
+  color: white;
+  font-size: 0.8rem;
+  left: 210px;
+}
+.content2 .shortInfo span {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 350px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ////////////////////  SECTION 3  ////////////////////// */
+
+.content3 {
+  position: relative;
+  background-image: url("../images/03_blend_1.jpg");
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  grid-area: blend;
+  transition: all 0.35s ease-in;
+}
+.content3 .companyText p {
+  position: absolute;
+  font-size: 3.5rem;
+  color: white;
+  margin: 50px;
+  bottom: 0;
+}
+/* ////////////////////  SECTION 4  ////////////////////// */
+.content4 {
+  position: relative;
+  background-image: url("../images/04_koloryzacja.jpg");
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  grid-area: koloryzacja;
+  transition: all 0.35s ease-in;
+}
+
+.content4 .companyText p {
+  position: absolute;
+  font-size: 3.5rem;
+  color: white;
+  margin: 50px;
+  bottom: 0;
+}
+/* ////////////////////  SECTION 5  ////////////////////// */
+.content5 {
+  position: relative;
+  background-image: url("../images/05_so_pure.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: so_pure;
+  transition: all 0.35s ease-in;
+}
+.content5 .wrapper5 {
+  position: absolute;
+  height: 200px;
+  width: 250px;
+  margin: 0 0 50px 50px;
+  bottom: 0;
+  left: 0;
+}
+
+.content5 .wrapper5 .companyText {
+  position: absolute;
+  font-size: 3.5rem;
+  color: white;
+  bottom: 50px;
+}
+
+.content5 .wrapper5 .shortInfo {
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.content5 .wrapper5 .shortInfo .line {
+  width: 180px;
+  left: 0;
+  border-bottom: 1px solid white;
+}
+
+.content5 .shortInfo .odkryj_siebie {
+  position: relative;
+  color: white;
+  font-size: 0.8rem;
+  left: 210px;
+}
+.content5 .shortInfo span {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 350px;
+  color: white;
+  cursor: pointer;
+}
+
+.empty:hover {
+  transform: scale(0.92);
+}
+.content1:hover {
+  transform: scale(0.92);
+}
+.content2:hover {
+  transform: scale(0.92);
+}
+.content3:hover {
+  transform: scale(0.92);
+}
+.content4:hover {
+  transform: scale(0.92);
+}
+.content5:hover {
+  transform: scale(0.92);
+}
+@media (max-width: 1350px) {
+  /* ////////////EMPTY///////////// */
+  .empty p {
+    font-size: 2.5rem;
+  }
+  .sectionGallery {
+    left: 25%;
+  }
+  .sectionGallery .sectionCircleGallery {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+  }
+  .sectionGallery .oneGallery {
+    font-size: 6rem;
+  }
+  .sectionGallery .crossLineGallery {
+    left: -25px;
+    top: 20px;
+    width: 150px;
+  }
+  /* ////////////CONTENTS////////// */
+
+  .content1 .companyText p {
+    font-size: 2.5rem;
+  }
+  .content2 .wrapper2 .companyText {
+    font-size: 2.5rem;
+  }
+  .content3 .companyText p {
+    font-size: 2.5rem;
+  }
+  .content4 .companyText p {
+    font-size: 2.5rem;
+  }
+  .content5 .wrapper5 .companyText {
+    font-size: 2.5rem;
+  }
+
+  /* //////////UNIVERSAL/////////// */
+  .shortInfo {
+    margin-right: 50px;
+  }
+
+  .shortInfo .line {
+    right: 170px;
+    width: 120px;
+  }
+
+  .shortInfo .odkryj_siebie {
+    margin-left: 40px;
+  }
+
+  /* ///////////////CONTENT 2///////////// */
+  .content2 .wrapper2 .shortInfo .line {
+    width: 90px;
+  }
+  .content2 .shortInfo .odkryj_siebie {
+    left: 80px;
+  }
+  .content2 .shortInfo span {
+    left: 230px;
+  }
+  /* ///////////////CONTENT 5///////////// */
+  .content5 .wrapper5 .shortInfo .line {
+    width: 90px;
+  }
+
+  .content5 .shortInfo .odkryj_siebie {
+    left: 80px;
+  }
+  .content5 .shortInfo span {
+    left: 230px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* ////////////EMPTY///////////// */
+  .empty p {
+    font-size: 1.5rem;
+  }
+  .sectionGallery {
+    left: 25%;
+  }
+  .sectionGallery .sectionCircleGallery {
+    width: 40px;
+    height: 40px;
+    border: 4px solid black;
+  }
+  .sectionGallery .oneGallery {
+    font-size: 4.6rem;
+  }
+  .sectionGallery .crossLineGallery {
+    left: -20px;
+    top: 20px;
+    width: 110px;
+  }
+  /* ////////////CONTENTS////////// */
+
+  .content1 .companyText p {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+  }
+  .content2 .wrapper2 .companyText {
+    font-size: 1.5rem;
+  }
+  .content3 .companyText p {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+  }
+  .content4 .companyText p {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+  }
+  .content5 .wrapper5 .companyText {
+    font-size: 1.5rem;
+  }
+
+  /* //////////UNIVERSAL/////////// */
+  .shortInfo {
+    margin-right: 40px;
+    bottom: 20px;
+  }
+
+  .shortInfo .line {
+    right: 170px;
+    width: 80px;
+  }
+
+  .shortInfo .odkryj_siebie {
+    margin-left: 50px;
+  }
+
+  /* ///////////////CONTENT 2///////////// */
+  .content2 .wrapper2 {
+    margin: 0 0 20px 10px;
+  }
+
+  .content2 .wrapper2 .shortInfo .line {
+    width: 90px;
+  }
+  .content2 .shortInfo .odkryj_siebie {
+    left: 60px;
+  }
+  .content2 .shortInfo span {
+    left: 210px;
+  }
+  /* ///////////////CONTENT 5///////////// */
+  .content5 .wrapper5 {
+    margin: 0 0 20px 10px;
+  }
+  .content5 .wrapper5 .shortInfo .line {
+    width: 90px;
+  }
+
+  .content5 .shortInfo .odkryj_siebie {
+    left: 60px;
+  }
+  .content5 .shortInfo span {
+    left: 210px;
+  }
+}
+
+@media (max-width: 780px) {
+  .galleryWrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "empty design"
+      "care care"
+      "blend blend"
+      "koloryzacja koloryzacja"
+      "so_pure so_pure";
+  }
+}
+
+@media (max-width: 530px) {
+  /* //////////UNIVERSAL/////////// */
+  .shortInfo {
+    margin-right: 5px;
+    bottom: 20px;
+  }
+
+  .shortInfo .line {
+    right: 140px;
+    width: 50px;
+  }
+
+  .shortInfo .odkryj_siebie {
+    margin-left: 60px;
+  }
+
+  /* ///////////////CONTENT 2///////////// */
+
+  .content2 .wrapper2 .shortInfo .line {
+    width: 50px;
+  }
+  .content2 .shortInfo .odkryj_siebie {
+    left: 0px;
+  }
+  .content2 .shortInfo span {
+    left: 150px;
+  }
+  /* ///////////////CONTENT 5///////////// */
+  .content5 .wrapper5 .shortInfo .line {
+    width: 50px;
+  }
+
+  .content5 .shortInfo .odkryj_siebie {
+    left: 0px;
+  }
+  .content5 .shortInfo span {
+    left: 150px;
+  }
+}

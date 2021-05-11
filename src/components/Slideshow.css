@@ -11,7 +11,11 @@
 .slide {
   position: absolute;
   width: 100%;
-  /* z-index: 1; */
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.slide-active {
+  opacity: 1;
 }
 
 .sliderImg {
@@ -104,32 +108,39 @@
   flex-direction: column;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 200px;
   align-items: center;
   top: 80%;
-  /* z-index: 2; */
 }
 .navigation .arrows {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   margin-bottom: 40px;
+  user-select: none;
 }
 
 .navigation .buttons {
   position: relative;
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  /* z-index: 2; */
 }
 .navigation .buttons .button {
   /* position: relative; */
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin: 10px 40px;
+  margin: 10px 50px;
   cursor: pointer;
-  border: 2px solid rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+.button-active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px 50px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1500px), (max-height: 800px) {
@@ -177,9 +188,9 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px), (max-height: 600px) {
   .info {
-    top: 20%;
+    top: 22%;
   }
   .info .description p {
     font-size: 2rem;
@@ -197,5 +208,31 @@
   .outerCircle {
     width: 60px;
     height: 60px;
+  }
+  .navigation {
+    top: 75%;
+  }
+  .socials {
+    margin: 0;
+  }
+
+  .navigation .buttons .button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 10px 30px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+  }
+  .button-active {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 10px 30px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .arrows .arrow {
+    font-size: 35px;
   }
 }
