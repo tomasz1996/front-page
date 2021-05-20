@@ -464,6 +464,10 @@
 
   /* ///////////////CONTENT 2///////////// */
 
+  .content2 .wrapper2 {
+    height: 100px;
+    width: 100px;
+  }
   .content2 .wrapper2 .shortInfo .line {
     width: 50px;
   }
